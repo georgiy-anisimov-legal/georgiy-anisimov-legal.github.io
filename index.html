@@ -203,6 +203,26 @@
       font-size: 16px;
     }
 
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-grid .card.contract {
+      grid-column: span 3;
+    }
+
+    .expertise-grid .card.analytics {
+      grid-column: span 3;
+    }
+
+    .expertise-grid .card.ip,
+    .expertise-grid .card.legaltech,
+    .expertise-grid .card.litigation {
+      grid-column: span 2;
+    }
+
     .grid {
       display: grid;
       gap: 18px;
@@ -341,8 +361,17 @@
       }
 
       .grid.three,
-      .grid.two {
+      .grid.two,
+      .expertise-grid {
         grid-template-columns: 1fr;
+      }
+
+      .expertise-grid .card.contract,
+      .expertise-grid .card.analytics,
+      .expertise-grid .card.ip,
+      .expertise-grid .card.legaltech,
+      .expertise-grid .card.litigation {
+        grid-column: auto;
       }
 
       .timeline-item {
@@ -425,8 +454,8 @@
           и предложением практико-ориентированных решений.
         </p>
 
-        <div class="grid three">
-          <div class="card">
+        <div class="expertise-grid">
+          <div class="card contract">
             <h3>Договорная работа</h3>
             <p>
               Правовая экспертиза и подготовка договоров поставки, подряда, оказания услуг,
@@ -435,7 +464,15 @@
             </p>
           </div>
 
-          <div class="card">
+          <div class="card analytics">
+            <h3>Правовая аналитика</h3>
+            <p>
+              Подготовка юридических заключений, статей, обзоров судебной практики,
+              мониторинг законодательства и структурирование правовой информации для бизнеса.
+            </p>
+          </div>
+
+          <div class="card ip">
             <h3>Интеллектуальная собственность</h3>
             <p>
               Квалификация объектов, проверка цепочки прав, анализ лицензионных договоров,
@@ -444,15 +481,7 @@
             </p>
           </div>
 
-          <div class="card">
-            <h3>Правовая аналитика</h3>
-            <p>
-              Подготовка юридических заключений, статей, обзоров судебной практики,
-              мониторинг законодательства и структурирование правовой информации для бизнеса.
-            </p>
-          </div>
-
-          <div class="card">
+          <div class="card legaltech">
             <h3>LegalTech и AI</h3>
             <p>
               Использование AI-инструментов для анализа больших объемов информации из открытых источников,
@@ -460,7 +489,7 @@
             </p>
           </div>
 
-          <div class="card">
+          <div class="card litigation">
             <h3>Претензионно-исковая работа</h3>
             <p>
               Подготовка претензий, исков, жалоб, ходатайств, анализ материалов дела,
@@ -468,20 +497,7 @@
             </p>
           </div>
         </div>
-
-        <div class="tags">
-          <span class="tag">Гражданское право</span>
-          <span class="tag">Договоры</span>
-          <span class="tag">IP</span>
-          <span class="tag">Compliance</span>
-          <span class="tag">ВЭД</span>
-          <span class="tag">B2B</span>
-          <span class="tag">Судебная практика</span>
-          <span class="tag">КонсультантПлюс</span>
-          <span class="tag">Гарант</span>
-          <span class="tag">AI tools</span>
-        </div>
-      </section>
+</section>
 
       <section id="experience">
         <h2 class="section-title">Опыт</h2>
